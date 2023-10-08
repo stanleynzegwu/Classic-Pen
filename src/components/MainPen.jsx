@@ -378,26 +378,26 @@ export function MainPen(props) {
       // console.log(clipRef.current.position);
     }
   });
-  const { position, rotation, penPosition, penRotation } = useControls({
-    position: {
-      value: { x: 33, y: 27, z: -28 },
-      step: 0.5,
-    },
-    penPosition: {
-      value: { x: 2.0, y: 5.0, z: 2.5 },
-      step: 0.5,
-    },
-    penRotation: {
-      value: { x: -0.5, y: 0, z: 0 },
-      step: 0.5,
-    },
-    rotation: {
-      min: -Math.PI * 2,
-      max: Math.PI * 2,
-      value: { x: camera.rotation.x, y: camera.rotation.y, z: camera.rotation.z },
-      step: 0.04,
-    },
-  });
+  // const { position, rotation, penPosition, penRotation } = useControls({
+  //   position: {
+  //     value: { x: 33, y: 27, z: -28 },
+  //     step: 0.5,
+  //   },
+  //   penPosition: {
+  //     value: { x: 2.0, y: 5.0, z: 2.5 },
+  //     step: 0.5,
+  //   },
+  //   penRotation: {
+  //     value: { x: -0.5, y: 0, z: 0 },
+  //     step: 0.5,
+  //   },
+  //   rotation: {
+  //     min: -Math.PI * 2,
+  //     max: Math.PI * 2,
+  //     value: { x: camera.rotation.x, y: camera.rotation.y, z: camera.rotation.z },
+  //     step: 0.04,
+  //   },
+  // });
 
   return (
     <group

@@ -40,9 +40,9 @@ const Experience = () => {
         <ScrollControls pages={7} damping={0.1}>
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
-          <Scroll>
+          {/* <Scroll>
             <PenAndBox />
-          </Scroll>
+          </Scroll> */}
           <AllSections />
         </ScrollControls>
       </Center>
