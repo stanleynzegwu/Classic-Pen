@@ -20,7 +20,7 @@
 
 const Header = () => {
   return (
-    <div className="w-[40%]" style={{ position: "absolute", top: `40vh`, left: "5%" }}>
+    <div className="header w-[40%]" style={{ position: "absolute", top: `40vh`, left: "5%" }}>
       <span>Introducing the new</span>
       <h1 className="title font-semibold text-8xl py-8" style={{}}>
         Classic Pen

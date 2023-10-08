@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience";
+import Overlay from "./components/UI/Overlay";
 
 function App() {
   return (
@@ -10,12 +11,13 @@ function App() {
           fov: 30,
           near: 0.1,
           far: 100,
-          position: [19, -2.399893760681152, 50],
+          // position: [33, 27, -28],
+          position: [36, 23, -27],
         }}
       >
         <Experience />
       </Canvas>
-      <div className="text">hello three</div>
+      <Overlay />
     </div>
   );
 }
