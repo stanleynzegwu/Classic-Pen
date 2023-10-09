@@ -56,13 +56,22 @@ body,
   scrollbar-width: none;
 }
 
+.main div {
+  z-index: 1;
+}
 .main {
   background: radial-gradient(circle at center, #545454, #000);
   width: 100%;
   height: 100%;
   position: relative;
+  pointer-events: all;
 
-}  
+}
+
+.h2Test {
+  pointer-events: 'all';
+  z-index: 100;
+}
 
 .overlay {
   width: 100%;

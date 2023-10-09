@@ -15,6 +15,7 @@ function App() {
           position: [36, 23, -27],
         }}
       >
+        {/* <color attach="background" args={["red"]} /> */}
         <Experience />
       </Canvas>
       <Overlay />

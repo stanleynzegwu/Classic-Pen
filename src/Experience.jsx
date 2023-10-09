@@ -16,28 +16,28 @@ import { useThree } from "@react-three/fiber";
 
 const Experience = () => {
   const snap = useSnapshot(store);
-  // const environmentMap = useTexture("images/envMap.jpg");
-  // const scene = useThree((state) => state.scene);
+  const environmentMap = useTexture("images/envMap.jpg");
+  const scene = useThree((state) => state.scene);
 
-  // //EnvironmentMap
-  // environmentMap.mapping = THREE.EquirectangularReflectionMapping;
-  // environmentMap.colorSpace = THREE.SRGBColorSpace;
-  // scene.environment = environmentMap;
+  //EnvironmentMap
+  environmentMap.mapping = THREE.EquirectangularReflectionMapping;
+  environmentMap.colorSpace = THREE.SRGBColorSpace;
+  scene.environment = environmentMap;
   return (
     <>
-      <OrbitControls makeDefault enableRotate={false} enableZoom={false} />
+      <OrbitControls makeDefault enableRotate={snap.contols} enableZoom={false} />
       <ambientLight intensity={1.5} />
       <directionalLight position={[1, 2, 3]} intensity={1.4} />
-      <Environment
+      {/* <Environment
         preset="city"
         ground={{
           height: 7,
           radius: 28,
           scale: 100,
         }}
-      />
+      /> */}
       <Center>
-        <ScrollControls pages={7} damping={0.1}>
+        <ScrollControls pages={7} damping={0.1} enabled={snap.scroll_Enabled}>
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
           {/* <Scroll>

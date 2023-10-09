@@ -1,11 +1,11 @@
 const Section1 = () => {
   return (
     <div
-      className="section_one opacity-0 h-[100vh] w-[100vw] flex items-center"
+      className="section_one bg-red-300 bg-opacity-5 h-[100vh] w-[100vw] flex items-center"
       style={{ position: "absolute", top: `100vh` }}
     >
       <div
-        className="absolute right-5 max-w-[400px]"
+        className=" absolute right-5 max-w-[400px]"
         // style={{
         //   position: "absolute",
         //   top: "50%",

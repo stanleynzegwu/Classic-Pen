@@ -5,17 +5,21 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
+import Footer from "./Footer";
+import { useSnapshot } from "valtio";
+import { store } from "../../store";
 
 const AllSections = () => {
+  const snap = useSnapshot(store);
   return (
-    <Scroll html style={{ width: "100%" }}>
+    <Scroll html style={{ width: "100%", pointerEvents: "all" }}>
       <Navbar />
       <Header />
       <Section1 />
       <Section2 />
       <Section3 />
       <Section4 />
-      <div
+      {/* <div
         className="header bg-red-400 h-[100vh] w-[100vw]"
         style={{ position: "absolute", top: `500vh`, right: "0" }}
       >
@@ -26,11 +30,14 @@ const AllSections = () => {
           Every stroke is a testament to the artistry that goes into creating each pen.
         </p>
         <button>Read more</button>
-      </div>
+      </div> */}
       <h2
+        className="h2Test bg-blue-200"
         style={{
+          pointerEvents: "all",
+          color: "#000000",
           position: "absolute",
-          top: "600vh",
+          top: "550vh",
           left: "50%",
           transform: `translate(-50%,-50%)`,
         }}
@@ -48,6 +55,7 @@ const AllSections = () => {
       >
         Buy now
       </button> */}
+      <Footer />
     </Scroll>
   );
 };
