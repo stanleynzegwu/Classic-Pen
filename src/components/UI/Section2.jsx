@@ -5,6 +5,8 @@ const Section2 = () => {
       style={{
         position: "absolute",
         top: `200vh`,
+        pointerEvents: "all",
+        touchAction: "auto",
       }}
     >
       <div className="absolute top-[55%] w-[100%] max-w-[600px]">

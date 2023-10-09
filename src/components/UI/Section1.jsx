@@ -2,7 +2,7 @@ const Section1 = () => {
   return (
     <div
       className={`section_one bg-opacity-5 opacity-0 h-[100vh] w-[100vw] flex items-center`}
-      style={{ position: "absolute", top: `100vh` }}
+      style={{ position: "absolute", top: `100vh`, pointerEvents: "all", touchAction: "auto" }}
     >
       <div className="absolute w-[50%] flex flex-col right-5 px-10">
         <h2 className="capitalize font-extrabold text-6xl py-4">Precision in Every Stroke</h2>

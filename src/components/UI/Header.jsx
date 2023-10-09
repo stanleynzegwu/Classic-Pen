@@ -20,7 +20,16 @@
 
 const Header = () => {
   return (
-    <div className="header w-[50%]" style={{ position: "absolute", top: `40vh`, left: "5%" }}>
+    <div
+      className="header w-[50%]"
+      style={{
+        position: "absolute",
+        top: `40vh`,
+        left: "5%",
+        pointerEvents: "all",
+        touchAction: "auto",
+      }}
+    >
       <span>Introducing the new</span>
       <div className="py-8">
         <h1 className="title font-baskerville font-extrabold text-8xl " style={{}}>

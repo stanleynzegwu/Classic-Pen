@@ -7,6 +7,8 @@ const Section5 = () => {
         top: "550vh",
         left: "50%",
         transform: `translate(-50%,-50%)`,
+        pointerEvents: "all",
+        touchAction: "auto",
       }}
     >
       <div className="absolute top-[55%] w-[100%] max-w-[600px]">

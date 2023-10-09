@@ -53,13 +53,17 @@ body,
   display: none;
 }
 
-.main div{
+#root .main div{
   -ms-overflow-style: none;
   scrollbar-width: none;
+  pointer-events: all;
+  touch-action: auto !important;
+  -ms-touch-action: auto !important;
 }
 
 .main div {
   z-index: 10;
+  touch-action: auto;
 }
 .main {
   background: radial-gradient(circle at center, #545454, #000);

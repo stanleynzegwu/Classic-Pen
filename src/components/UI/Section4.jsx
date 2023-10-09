@@ -2,7 +2,7 @@ const Section4 = () => {
   return (
     <div
       className="section_four opacity-0 h-[100vh] w-[100vw] flex items-center"
-      style={{ position: "absolute", top: `400vh` }}
+      style={{ position: "absolute", top: `400vh`, pointerEvents: "all", touchAction: "auto" }}
     >
       <div className="absolute w-[50%] flex flex-col left-5 px-10">
         <h2 className="capitalize font-extrabold text-6xl py-4">The Tip of Excellence</h2>

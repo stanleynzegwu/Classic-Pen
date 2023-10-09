@@ -9,6 +9,8 @@ const Navbar = () => {
         position: "absolute",
         // top: `5vh`,
         // left: "5%",
+        pointerEvents: "all",
+        touchAction: "auto",
       }}
     >
       <ul className="flex items-center justify-between h-full">

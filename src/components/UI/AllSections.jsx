@@ -13,7 +13,7 @@ import Section5 from "./section5";
 const AllSections = () => {
   const snap = useSnapshot(store);
   return (
-    <Scroll html style={{ width: "100%", pointerEvents: "all" }}>
+    <Scroll html style={{ width: "100%", touchAction: "auto" }}>
       <Navbar />
       <Header />
       <Section1 />

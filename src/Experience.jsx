@@ -25,7 +25,7 @@ const Experience = () => {
   scene.environment = environmentMap;
   return (
     <>
-      <OrbitControls makeDefault enableRotate={snap.contols} enableZoom={false} />
+      <OrbitControls makeDefault enableRotate={snap.contols} enableZoom={false} enabled={false} />
       <ambientLight intensity={1.5} />
       <directionalLight position={[1, 2, 3]} intensity={1.4} />
       {/* <Environment
@@ -37,7 +37,12 @@ const Experience = () => {
         }}
       /> */}
       <Center>
-        <ScrollControls pages={7.5} damping={0.1} enabled={snap.scroll_Enabled}>
+        <ScrollControls
+          pages={7.5}
+          damping={0.1}
+          enabled={snap.scroll_Enabled}
+          style={{ touchAction: "auto" }}
+        >
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
           {/* <Scroll>
