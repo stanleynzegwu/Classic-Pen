@@ -7,9 +7,10 @@ const Section1 = () => {
       <div className="absolute w-[50%] flex flex-col right-5 px-10">
         <h2 className="capitalize font-extrabold text-6xl py-4">Precision in Every Stroke</h2>
         <p className="text-gray-300">
-          The heart of our classic pen lies in its nib or ballpoint. Crafted with the utmost
-          precision, it glides smoothly on paper, leaving behind a trail of beautifully inked words.
-          Every stroke is a testament to the artistry that goes into creating each pen.
+          The heart of our classic pen lies in its{" "}
+          <span className="text-[#F4C580] capitalize font-bold">nib/ballpoint</span>. Crafted with
+          the utmost precision, it glides smoothly on paper, leaving behind a trail of beautifully
+          inked words. Every stroke is a testament to the artistry that goes into creating each pen.
         </p>
       </div>
     </div>

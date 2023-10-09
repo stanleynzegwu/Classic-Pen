@@ -10,10 +10,10 @@ const Section2 = () => {
       <div className="absolute top-[55%] w-[100%] max-w-[600px]">
         <h2 className="capitalize font-extrabold text-6xl py-4">A Barrel of Elegance</h2>
         <p className="text-gray-300">
-          The barrel of our classic pen is a work of art in itself. Crafted from the finest
-          materials, it exudes elegance and grace. Its balanced weight ensures a comfortable grip,
-          allowing you to write for hours without fatigue. Holding our pen is like holding a piece
-          of timeless luxury.
+          The <span className="text-[#F4C580] capitalize font-bold">barrel</span> of our classic pen
+          is a work of art in itself. Crafted from the finest materials, it exudes elegance and
+          grace. Its balanced weight ensures a comfortable grip, allowing you to write for hours
+          without fatigue. Holding our pen is like holding a piece of timeless luxury.
         </p>
       </div>
     </div>
