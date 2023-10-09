@@ -29,6 +29,9 @@ export function MainPen(props) {
   const section_1_ref = useRef();
   const section_2_ref = useRef();
   const section_3_ref = useRef();
+  const section_4_ref = useRef();
+  const section_5_ref = useRef();
+  const customizerButtonRef = useRef();
 
   useEffect(() => {
     if (snap.start_Experience) {
@@ -37,6 +40,9 @@ export function MainPen(props) {
       section_1_ref.current = document.getElementsByClassName("section_one");
       section_2_ref.current = document.getElementsByClassName("section_two");
       section_3_ref.current = document.getElementsByClassName("section_three");
+      section_4_ref.current = document.getElementsByClassName("section_four");
+      section_5_ref.current = document.getElementsByClassName("section_five");
+      customizerButtonRef.current = document.getElementsByClassName("customize_button");
     }
   }, [snap.start_Experience]);
 
@@ -58,22 +64,22 @@ export function MainPen(props) {
           },
           timelinePoint: 0.02 * 20,
         },
-        // {
-        //   objectToAnimate: section_1_ref.current,
-        //   properties: {
-        //     opacity: 1,
-        //     duration: 0.5,
-        //   },
-        //   timelinePoint: 0.15 * 20,
-        // },
-        // {
-        //   objectToAnimate: section_1_ref.current,
-        //   properties: {
-        //     opacity: 0,
-        //     duration: 0.5,
-        //   },
-        //   timelinePoint: 0.3 * 20,
-        // },
+        {
+          objectToAnimate: section_1_ref.current,
+          properties: {
+            opacity: 1,
+            duration: 1.5,
+          },
+          timelinePoint: 2,
+        },
+        {
+          objectToAnimate: section_1_ref.current,
+          properties: {
+            opacity: 0,
+            duration: 1,
+          },
+          timelinePoint: 6,
+        },
         {
           objectToAnimate: pen.current.rotation,
           properties: {
@@ -114,9 +120,17 @@ export function MainPen(props) {
           objectToAnimate: section_2_ref.current,
           properties: {
             opacity: 1,
-            duration: 0.5,
+            duration: 1.5,
           },
-          timelinePoint: 0.34 * 20,
+          timelinePoint: 7,
+        },
+        {
+          objectToAnimate: section_2_ref.current,
+          properties: {
+            opacity: 0,
+            duration: 1.2,
+          },
+          timelinePoint: 10,
         },
         {
           objectToAnimate: camera,
@@ -127,7 +141,7 @@ export function MainPen(props) {
             },
             duration: 2,
           },
-          timelinePoint: 6,
+          timelinePoint: 5.2,
         },
         {
           objectToAnimate: pen.current.position,
@@ -137,7 +151,7 @@ export function MainPen(props) {
             z: -10,
             duration: 3,
           },
-          timelinePoint: 6,
+          timelinePoint: 5.2,
         },
         {
           objectToAnimate: pen.current.rotation,
@@ -147,7 +161,7 @@ export function MainPen(props) {
             z: -0.5,
             duration: 3,
           },
-          timelinePoint: 6,
+          timelinePoint: 5.2,
         },
       ];
       AnimationsData = [...AnimationsData, ...BarrelAnimation];
@@ -158,9 +172,17 @@ export function MainPen(props) {
           objectToAnimate: section_3_ref.current,
           properties: {
             opacity: 1,
-            duration: 0.5,
+            duration: 1.5,
           },
-          timelinePoint: 0.68 * 20,
+          timelinePoint: 11,
+        },
+        {
+          objectToAnimate: section_3_ref.current,
+          properties: {
+            opacity: 0,
+            duration: 1.5,
+          },
+          timelinePoint: 14,
         },
         {
           objectToAnimate: camera,
@@ -171,7 +193,7 @@ export function MainPen(props) {
             },
             duration: 2,
           },
-          timelinePoint: 10.2,
+          timelinePoint: 9.6,
         },
         {
           objectToAnimate: pen.current.position,
@@ -181,7 +203,7 @@ export function MainPen(props) {
             z: -10,
             duration: 4,
           },
-          timelinePoint: 10.2,
+          timelinePoint: 9.6,
         },
         {
           objectToAnimate: pen.current.rotation,
@@ -191,7 +213,7 @@ export function MainPen(props) {
             z: 0,
             duration: 4,
           },
-          timelinePoint: 10.2,
+          timelinePoint: 9.6,
         },
       ];
 
@@ -200,6 +222,22 @@ export function MainPen(props) {
       //Tip Animation
       const TipAnimation = [
         {
+          objectToAnimate: section_4_ref.current,
+          properties: {
+            opacity: 1,
+            duration: 1.5,
+          },
+          timelinePoint: 15.4,
+        },
+        {
+          objectToAnimate: section_4_ref.current,
+          properties: {
+            opacity: 0,
+            duration: 1.5,
+          },
+          timelinePoint: 18.5,
+        },
+        {
           objectToAnimate: pen.current.rotation,
           properties: {
             x: -1.0,
@@ -207,7 +245,7 @@ export function MainPen(props) {
             z: 0,
             duration: 4,
           },
-          timelinePoint: 14.8,
+          timelinePoint: 14,
         },
         {
           objectToAnimate: pen.current.position,
@@ -217,7 +255,7 @@ export function MainPen(props) {
             z: -14.5,
             duration: 4,
           },
-          timelinePoint: 14.8,
+          timelinePoint: 14,
         },
         {
           objectToAnimate: camera,
@@ -228,7 +266,7 @@ export function MainPen(props) {
             },
             duration: 2,
           },
-          timelinePoint: 14.8,
+          timelinePoint: 14,
         },
       ];
 
@@ -237,6 +275,22 @@ export function MainPen(props) {
       //Construction Animation
       const ConstructionAnimation = [
         {
+          objectToAnimate: section_5_ref.current,
+          properties: {
+            opacity: 1,
+            duration: 1.5,
+          },
+          timelinePoint: 20.2,
+        },
+        {
+          objectToAnimate: section_5_ref.current,
+          properties: {
+            opacity: 0,
+            duration: 1.5,
+          },
+          timelinePoint: 22.8,
+        },
+        {
           objectToAnimate: pen.current.rotation,
           properties: {
             x: -0.5,
@@ -244,7 +298,7 @@ export function MainPen(props) {
             z: 0,
             duration: 2,
           },
-          timelinePoint: 19.5,
+          timelinePoint: 18.5,
         },
         {
           objectToAnimate: pen.current.position,
@@ -254,7 +308,7 @@ export function MainPen(props) {
             z: 0,
             duration: 2,
           },
-          timelinePoint: 19.5,
+          timelinePoint: 18.5,
         },
         {
           objectToAnimate: camera,
@@ -265,7 +319,7 @@ export function MainPen(props) {
             },
             duration: 2,
           },
-          timelinePoint: 19.5,
+          timelinePoint: 18.5,
         },
         {
           objectToAnimate: ballpointRef.current.position,
@@ -274,16 +328,19 @@ export function MainPen(props) {
             y: -10,
             duration: 2,
           },
-          timelinePoint: 22,
+          timelinePoint: 20.5,
         },
         {
           objectToAnimate: tipRef.current.position,
           properties: {
             z: 3,
             y: -8,
+            // z: 0,
+            // y: -3,
+            // x: 10,
             duration: 2,
           },
-          timelinePoint: 22,
+          timelinePoint: 20.5,
         },
         {
           objectToAnimate: refillRef.current.position,
@@ -292,7 +349,7 @@ export function MainPen(props) {
             y: -4.8,
             duration: 2,
           },
-          timelinePoint: 22,
+          timelinePoint: 20.5,
         },
         {
           objectToAnimate: clipRef.current.position,
@@ -301,7 +358,7 @@ export function MainPen(props) {
             y: -0.4,
             duration: 2,
           },
-          timelinePoint: 22,
+          timelinePoint: 20.5,
         },
         {
           objectToAnimate: penStanRef.current.position,
@@ -310,7 +367,7 @@ export function MainPen(props) {
             y: -0.4,
             duration: 2,
           },
-          timelinePoint: 22,
+          timelinePoint: 20.5,
         },
       ];
 
@@ -325,7 +382,7 @@ export function MainPen(props) {
             y: -3.633,
             duration: 1,
           },
-          timelinePoint: 24,
+          timelinePoint: 22.5,
         },
         {
           objectToAnimate: tipRef.current.position,
@@ -334,7 +391,7 @@ export function MainPen(props) {
             y: -3.295,
             duration: 1,
           },
-          timelinePoint: 24,
+          timelinePoint: 22.5,
         },
         {
           objectToAnimate: refillRef.current.position,
@@ -343,7 +400,7 @@ export function MainPen(props) {
             y: -3.299,
             duration: 1,
           },
-          timelinePoint: 24,
+          timelinePoint: 22.5,
         },
         {
           objectToAnimate: clipRef.current.position,
@@ -352,7 +409,7 @@ export function MainPen(props) {
             y: -3.223,
             duration: 1,
           },
-          timelinePoint: 24,
+          timelinePoint: 22.5,
         },
         {
           objectToAnimate: penStanRef.current.position,
@@ -361,7 +418,7 @@ export function MainPen(props) {
             y: -3.223,
             duration: 1,
           },
-          timelinePoint: 24,
+          timelinePoint: 22.5,
         },
         {
           objectToAnimate: main_ref.current,
@@ -369,7 +426,23 @@ export function MainPen(props) {
             background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
             duration: 0.5,
           },
-          timelinePoint: 25.5,
+          timelinePoint: 23.9,
+        },
+        {
+          objectToAnimate: customizerButtonRef.current,
+          properties: {
+            opacity: 1,
+            duration: 0.5,
+          },
+          timelinePoint: 24,
+        },
+        {
+          objectToAnimate: customizerButtonRef.current,
+          properties: {
+            display: "block",
+            duration: 0.5,
+          },
+          timelinePoint: 24,
         },
         {
           objectToAnimate: main_ref.current,

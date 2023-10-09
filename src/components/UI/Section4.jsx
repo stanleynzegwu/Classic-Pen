@@ -1,12 +1,12 @@
 const Section4 = () => {
   return (
     <div
-      className="section_one bg-yellow-400 bg-opacity-5 h-[100vh] w-[100vw]"
+      className="section_four opacity-0 h-[100vh] w-[100vw] flex items-center"
       style={{ position: "absolute", top: `400vh` }}
     >
-      <div className="absolute left-5 h-[100vh] w-[100vw] flex flex-col  justify-center max-w-[400px]">
-        <h2>The Tip of Excellence</h2>
-        <p>
+      <div className="absolute w-[50%] flex flex-col left-5 px-10">
+        <h2 className="capitalize font-extrabold text-6xl py-4">The Tip of Excellence</h2>
+        <p className="text-gray-300">
           The tip of our classic pen is where precision meets performance. Whether it's fine lines
           or bold strokes, our pen's tip delivers excellence with every movement. It's the
           embodiment of quality and attention to detail, ensuring that your writing is always

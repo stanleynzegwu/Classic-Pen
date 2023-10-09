@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience";
 import Overlay from "./components/UI/Overlay";
+import CustomizeButton from "./components/UI/CustomizeButton";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         {/* <color attach="background" args={["red"]} /> */}
         <Experience />
       </Canvas>
+      <CustomizeButton />
       <Overlay />
     </div>
   );

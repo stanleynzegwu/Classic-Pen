@@ -1,8 +1,9 @@
 const Footer = () => {
   return (
     <div
-      className="bg-orange-400 -5 h-[100vh] w-[100vw]"
-      style={{ position: "absolute", top: `600vh` }}
+      className="bg-gray-300 h-[100vh] w-[100vw] z-50"
+      style={{ position: "absolute", top: `650vh` }}
+      onClick={() => console.log("top")}
     >
       <div className="text-black">go back to top</div>
     </div>
