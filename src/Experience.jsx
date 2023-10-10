@@ -27,9 +27,9 @@ const Experience = () => {
     <>
       <OrbitControls
         makeDefault
-        enableRotate={snap.contols_Enabled}
+        enableRotate={snap.controls_Enabled}
         enableZoom={false}
-        enabled={snap.contols_Enabled}
+        enabled={false}
       />
       <ambientLight intensity={1.5} />
       <directionalLight position={[1, 2, 3]} intensity={1.4} />

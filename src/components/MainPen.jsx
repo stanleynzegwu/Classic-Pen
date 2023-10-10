@@ -5,6 +5,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { useSnapshot } from "valtio";
 import { store } from "../store";
+import { customizationExit_Animation, customizationIntroAnimation } from "../utils";
 
 export function MainPen(props) {
   const snap = useSnapshot(store);
@@ -436,14 +437,14 @@ export function MainPen(props) {
           },
           timelinePoint: 24,
         },
-        {
-          objectToAnimate: customizerButtonRef.current,
-          properties: {
-            display: "block",
-            duration: 0.5,
-          },
-          timelinePoint: 24,
-        },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     display: "block",
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 24,
+        // },
         {
           objectToAnimate: customizerButtonRef.current,
           properties: {
@@ -452,14 +453,14 @@ export function MainPen(props) {
           },
           timelinePoint: 25.5,
         },
-        {
-          objectToAnimate: customizerButtonRef.current,
-          properties: {
-            display: "hidden",
-            duration: 0.5,
-          },
-          timelinePoint: 26,
-        },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     display: "hidden",
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 26,
+        // },
         // {
         //   objectToAnimate: customizerButtonRef.current,
         //   properties: {
@@ -507,7 +508,7 @@ export function MainPen(props) {
       // const a = scroll.curve(1 / 3, 1 / 3);
       // const a = scroll.visible(2 / 3, 1 / 3);
       // console.log(scroll.range(0, 1.75 / 7));
-      // console.log(scroll.offset);
+      // console.log(pen.current);
     }
   });
   // const { position, rotation, penPosition, penRotation } = useControls({
@@ -516,11 +517,11 @@ export function MainPen(props) {
   //     step: 0.5,
   //   },
   //   penPosition: {
-  //     value: { x: 2.0, y: 5.0, z: 2.5 },
+  //     value: { x: 1.5, y: 10.5, z: 0 },
   //     step: 0.5,
   //   },
   //   penRotation: {
-  //     value: { x: -0.5, y: 0, z: 0 },
+  //     value: { x: -0.5, y: 0.3, z: 0 },
   //     step: 0.5,
   //   },
   //   rotation: {
@@ -530,6 +531,18 @@ export function MainPen(props) {
   //     step: 0.04,
   //   },
   // });
+
+  useEffect(() => {
+    if (snap.playCustomizeAnimation) {
+      customizationIntroAnimation(pen.current);
+    }
+  }, [snap.playCustomizeAnimation]);
+
+  useEffect(() => {
+    if (snap.playExitAnimation) {
+      customizationExit_Animation(pen.current);
+    }
+  }, [snap.playExitAnimation]);
 
   return (
     <group

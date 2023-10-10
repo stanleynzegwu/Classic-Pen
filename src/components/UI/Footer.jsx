@@ -15,14 +15,23 @@ const Footer = () => {
   };
   const lastSectionRef = useRef();
   useEffect(() => {
+    const timeline = gsap.timeline();
     if (snap.customizer_Enabled) {
-      const timeline = gsap.timeline();
       timeline.to(lastSectionRef.current, {
         opacity: 0,
         ease: "power1.inOut",
         duration: 0.5,
         onComplete: () => {
           lastSectionRef.current.style.display = "none";
+        },
+      });
+    } else {
+      timeline.to(lastSectionRef.current, {
+        opacity: 1,
+        ease: "power1.inOut",
+        duration: 0.5,
+        onComplete: () => {
+          lastSectionRef.current.style.display = "flex";
         },
       });
     }
