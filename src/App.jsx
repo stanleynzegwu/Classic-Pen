@@ -19,7 +19,6 @@ function App() {
         {/* <color attach="background" args={["red"]} /> */}
         <Experience />
       </Canvas>
-      <CustomizeButton />
       <Overlay />
     </div>
   );

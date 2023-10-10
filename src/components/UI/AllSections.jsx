@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import { useSnapshot } from "valtio";
 import { store } from "../../store";
 import Section5 from "./section5";
+import CustomizeButton from "./CustomizeButton";
 
 const AllSections = () => {
   const snap = useSnapshot(store);
@@ -21,6 +22,7 @@ const AllSections = () => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <CustomizeButton />
       {/* <div
         className="header bg-red-400 h-[100vh] w-[100vw]"
         style={{ position: "absolute", top: `500vh`, right: "0" }}

@@ -445,6 +445,38 @@ export function MainPen(props) {
           timelinePoint: 24,
         },
         {
+          objectToAnimate: customizerButtonRef.current,
+          properties: {
+            opacity: 0,
+            duration: 1,
+          },
+          timelinePoint: 25.5,
+        },
+        {
+          objectToAnimate: customizerButtonRef.current,
+          properties: {
+            display: "hidden",
+            duration: 0.5,
+          },
+          timelinePoint: 26,
+        },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     opacity: 1,
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 24,
+        // },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     top: "55%",
+        //     duration: 2,
+        //   },
+        //   timelinePoint: 24,
+        // },
+        {
           objectToAnimate: main_ref.current,
           properties: {
             background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
@@ -475,7 +507,7 @@ export function MainPen(props) {
       // const a = scroll.curve(1 / 3, 1 / 3);
       // const a = scroll.visible(2 / 3, 1 / 3);
       // console.log(scroll.range(0, 1.75 / 7));
-      // console.log(clipRef.current.position);
+      // console.log(scroll.offset);
     }
   });
   // const { position, rotation, penPosition, penRotation } = useControls({

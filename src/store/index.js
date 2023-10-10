@@ -2,6 +2,7 @@ import { proxy } from 'valtio'
 
 export const store = proxy({
     start_Experience: false,
-    contols: false,
-    scroll_Enabled: true
+    contols_Enabled: false,
+    scroll_Enabled: true,
+    customizer_Enabled: false
 });

@@ -1,7 +1,7 @@
 const Section5 = () => {
   return (
     <div
-      className="section_five bg-blue-500 bg-opacity-5 opacity-0 h-[100vh] w-[100vw] flex flex-col justify-center items-center"
+      className="section_five opacity-0 h-[100vh] w-[100vw] flex flex-col justify-center items-center"
       style={{
         position: "absolute",
         top: "550vh",
