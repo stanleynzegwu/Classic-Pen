@@ -26,7 +26,8 @@ const Experience = () => {
   return (
     <>
       <OrbitControls
-        makeDefault
+        // makeDefault
+        enableDamping
         enableRotate={snap.controls_Enabled}
         enableZoom={false}
         enabled={false}

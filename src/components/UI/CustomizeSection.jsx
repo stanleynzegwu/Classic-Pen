@@ -1,8 +1,10 @@
 import { useRef } from "react";
 import { store } from "../../store";
 import { useSnapshot } from "valtio";
+import { customizationExit_Animation, customizationIntro_Animation } from "../../utils";
+import Configurator from "./Configurator";
 
-const CustomizeButton = () => {
+const CustomizeSection = () => {
   const snap = useSnapshot(store);
   const customizeSection_ref = useRef();
   const customizeButton_ref = useRef();
@@ -38,15 +40,14 @@ const CustomizeButton = () => {
           scrollToElement();
           store.scroll_Enabled = false;
           store.controls_Enabled = true;
-          store.playCustomizeAnimation = true;
-          store.playExitAnimation = false;
+          customizationIntro_Animation(snap.penRef.current);
         }}
       >
         Customize
       </button>
-
+      <Configurator />
       <button
-        className={`absolute bottom-3 h-[45px] w-[200px] font-bold left-1/2 -translate-x-1/2 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
+        className={`absolute bottom-6 h-[40px] w-[150px] font-bold right-10 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
           snap.customizer_Enabled ? "visible" : "invisible"
         }`}
         onClick={() => {
@@ -54,8 +55,7 @@ const CustomizeButton = () => {
           store.customizer_Enabled = false;
           store.scroll_Enabled = true;
           customizerExitScroll();
-          store.playExitAnimation = true;
-          store.playCustomizeAnimation = false;
+          customizationExit_Animation(snap.penRef.current);
         }}
       >
         Exit
@@ -64,7 +64,7 @@ const CustomizeButton = () => {
   );
 };
 
-export default CustomizeButton;
+export default CustomizeSection;
 
 // const ExitButton = () => {
 //   const snap = useSnapshot(store);

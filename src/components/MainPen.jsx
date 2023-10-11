@@ -5,17 +5,19 @@ import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { useSnapshot } from "valtio";
 import { store } from "../store";
-import { customizationExit_Animation, customizationIntroAnimation } from "../utils";
 
 export function MainPen(props) {
   const snap = useSnapshot(store);
   const { nodes, materials } = useGLTF("/models/penNew.glb");
+  materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor, isColor: true };
+  materials.goldpen_Silver.color = { ...snap.modelConfigurator.otherColor, isColor: true };
+  materials.silverBallMouth.color = { ...snap.modelConfigurator.ballPointColor, isColor: true };
   const scroll = useScroll();
-  const { camera, ...state } = useThree();
+  const { camera } = useThree();
   const tl = useRef();
-  const pen = useRef();
 
   // meshes ref
+  const pen = useRef();
   const clipRef = useRef();
   const penStanRef = useRef();
   const barrelRef = useRef();
@@ -44,6 +46,8 @@ export function MainPen(props) {
       section_4_ref.current = document.getElementsByClassName("section_four");
       section_5_ref.current = document.getElementsByClassName("section_five");
       customizerButtonRef.current = document.getElementsByClassName("customize_button");
+      //save Pen model reference to state
+      store.penRef = pen;
     }
   }, [snap.start_Experience]);
 
@@ -504,10 +508,6 @@ export function MainPen(props) {
   useFrame(() => {
     if (snap.start_Experience) {
       tl.current.seek(scroll.offset * tl.current.duration());
-      // const a = scroll.range(0, 1 / 2);
-      // const a = scroll.curve(1 / 3, 1 / 3);
-      // const a = scroll.visible(2 / 3, 1 / 3);
-      // console.log(scroll.range(0, 1.75 / 7));
       // console.log(pen.current);
     }
   });
@@ -531,18 +531,6 @@ export function MainPen(props) {
   //     step: 0.04,
   //   },
   // });
-
-  useEffect(() => {
-    if (snap.playCustomizeAnimation) {
-      customizationIntroAnimation(pen.current);
-    }
-  }, [snap.playCustomizeAnimation]);
-
-  useEffect(() => {
-    if (snap.playExitAnimation) {
-      customizationExit_Animation(pen.current);
-    }
-  }, [snap.playExitAnimation]);
 
   return (
     <group
@@ -569,6 +557,7 @@ export function MainPen(props) {
         rotation={[1.03, -0.942, -1.131]}
       />
       <mesh
+        visible={snap.modelConfigurator.clipType === "branded"}
         ref={penStanRef}
         name="Pen_STAN"
         geometry={nodes.Pen_STAN.geometry}
@@ -585,10 +574,11 @@ export function MainPen(props) {
         rotation={[1.03, -0.942, -1.131]}
       />
       <mesh
+        visible={snap.modelConfigurator.clipType !== "branded"}
         ref={clipRef}
         name="Pen_Clip"
         geometry={nodes.Pen_Clip.geometry}
-        material={materials["Pen - Clip material.006"]}
+        material={materials.goldpen_Silver}
         position={[11.143, -3.223, -1.358]}
         rotation={[0.952, -0.962, -1.194]}
       />

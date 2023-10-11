@@ -1,12 +1,56 @@
-export const frames = () => [
-    {
-        // Html div
-        // Restore previous animations
-        objectToAnimate: header_ref.current,
-        properties: {
-          opacity: 0,
-          duration: 0.3,
-        },
-        timelinePoint: 0.5,
-      },
+export const barrelColors = [
+  {
+    name: 'gold',
+    color: {
+      r: 0.9046609401702881,
+      g: 0.5583400726318359,
+      b: 0.21586063504219055,
+    }
+  },
+  {
+    name: 'silver',
+    color: {
+      r:0.5271145105361938,
+      g:0.5271146893501282,
+      b:0.5271151661872864,
+    }
+  },
+]
+
+export const otherColors = [
+  {
+    name: 'gold',
+    color: {
+      r: 0.9046609401702881,
+      g: 0.5583400726318359,
+      b: 0.21586063504219055,
+    }
+  },
+  {
+    name: 'silver',
+    color: {
+      r:0.5271145105361938,
+      g:0.5271146893501282,
+      b:0.5271151661872864,
+    }
+  },
+]
+
+export const ballpointColors = [
+  {
+    name: 'gold',
+    color: {
+      r: 0.9046609401702881,
+      g: 0.5583400726318359,
+      b: 0.21586063504219055,
+    }
+  },
+  {
+    name: 'silver',
+    color: {
+      r:0.5271145105361938,
+      g:0.5271146893501282,
+      b:0.5271151661872864,
+    }
+  },
 ]
