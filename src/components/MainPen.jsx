@@ -9,9 +9,13 @@ import { store } from "../store";
 export function MainPen(props) {
   const snap = useSnapshot(store);
   const { nodes, materials } = useGLTF("/models/penNew.glb");
-  materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor, isColor: true };
-  materials.goldpen_Silver.color = { ...snap.modelConfigurator.otherColor, isColor: true };
-  materials.silverBallMouth.color = { ...snap.modelConfigurator.ballPointColor, isColor: true };
+  // console.log(materials.goldpen_Gold.color);
+  materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor.color, isColor: true };
+  materials.goldpen_Silver.color = { ...snap.modelConfigurator.otherColor.color, isColor: true };
+  materials.silverBallMouth.color = {
+    ...snap.modelConfigurator.ballPointColor.color,
+    isColor: true,
+  };
   const scroll = useScroll();
   const { camera } = useThree();
   const tl = useRef();
@@ -537,6 +541,7 @@ export function MainPen(props) {
       {...props}
       dispose={null}
       ref={pen}
+      castShadow
       // position={[penPosition.x, penPosition.y, penPosition.z]}
       // rotation={[penRotation.x, penRotation.y, penRotation.z]}
     >

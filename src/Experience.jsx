@@ -1,5 +1,6 @@
 import {
   Center,
+  ContactShadows,
   Environment,
   OrbitControls,
   Scroll,
@@ -33,7 +34,7 @@ const Experience = () => {
         enabled={false}
       />
       <ambientLight intensity={1.5} />
-      <directionalLight position={[1, 2, 3]} intensity={1.4} />
+      <directionalLight position={[1, 2, 3]} intensity={1} castShadow />
       <Environment
         preset="city"
         ground={{
@@ -41,6 +42,14 @@ const Experience = () => {
           radius: 28,
           scale: 100,
         }}
+      />
+      <ContactShadows
+        resolution={512}
+        position={[0, -0.8, 0]}
+        opacity={1}
+        scale={10}
+        blur={2}
+        far={0.8}
       />
       <Center>
         <ScrollControls

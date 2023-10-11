@@ -65,26 +65,3 @@ const CustomizeSection = () => {
 };
 
 export default CustomizeSection;
-
-// const ExitButton = () => {
-//   const snap = useSnapshot(store);
-//   const customizerExitScroll = () => {
-//     customizeButton_ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
-//   };
-//   return (
-//     <button
-//       className={`absolute bottom-3 h-[45px] w-[200px] font-bold left-1/2 -translate-x-1/2 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
-//         snap.customizer_Enabled ? "block" : "hidden"
-//       }`}
-//       onClick={() => {
-//         store.controls_Enabled = false;
-//         store.customizer_Enabled = false;
-//         store.scroll_Enabled = true;
-
-//         customizerExitScroll();
-//       }}
-//     >
-//       Exit
-//     </button>
-//   );
-// };
