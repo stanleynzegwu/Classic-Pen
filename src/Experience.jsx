@@ -46,7 +46,7 @@ const Experience = () => {
       />
       <Center>
         <ScrollControls
-          pages={7.5}
+          pages={8}
           damping={0.1}
           enabled={snap.scroll_Enabled}
           style={{ touchAction: "auto" }}
