@@ -14,7 +14,7 @@ const Configurator = () => {
         snap.customizer_Enabled ? "visible" : "invisible"
       }`}
     >
-      <div className="invisible lg:visible absolute bottom-[20%] right-0 w-[100%] md:w-[20%] h-[20%] md:h-[80%] p-2 md:p-6 flex md:flex-col items-center">
+      <div className="absolute bottom-[20%] right-0 w-[100%] md:w-[20%] h-[20%] md:h-[80%] p-2 md:p-6 flex md:flex-col items-center">
         <div className="w-[100%] h-full flex flex-col items-center gap-2 md:gap-6">
           <h2 className="capitalize text-md font-medium">model x</h2>
           <div className="hidden md:flex justify-center gap-4">
@@ -27,7 +27,7 @@ const Configurator = () => {
               <span className="block text-[10px] text-gray-700">standard</span>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-row md:flex-col items-center gap-2">
             <span
               className={`block rounded-full py-1 px-3 w-[150px] text-center text-[10px] font-medium cursor-pointer ${
                 clipType === "branded"
@@ -62,7 +62,7 @@ const Configurator = () => {
             </span>
           </div>
         </div>
-        <div className="w-[100%] h-full flex flex-col gap-1 md:gap-4 items-center">
+        <div className="hidden w-[100%] h-full md:flex flex-col gap-1 md:gap-4 items-center">
           <div className="">
             <span className="mx-2 md:mx-0 md:block capitalize text-center text-[10px] font-medium">
               potential savings

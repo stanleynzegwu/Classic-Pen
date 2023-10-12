@@ -69,7 +69,7 @@ export function MainPen(props) {
           // Html
           objectToAnimate: header_ref.current,
           properties: {
-            left: "-40%",
+            left: "-20%",
             opacity: 0,
             duration: 2,
           },
