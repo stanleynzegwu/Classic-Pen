@@ -94,6 +94,18 @@ export function MainPen(props) {
           },
           timelinePoint: 6,
         },
+        ///// i added this because i increased the scale for the landing page to make it better
+        // {
+        //   objectToAnimate: pen.current.scale,
+        //   properties: {
+        //     x: 1,
+        //     y: 1,
+        //     z: 1,
+        //     duration: 4,
+        //   },
+        //   timelinePoint: 0.2,
+        // },
+        //////
         {
           objectToAnimate: pen.current.rotation,
           properties: {
@@ -349,9 +361,6 @@ export function MainPen(props) {
           properties: {
             z: 3,
             y: -8,
-            // z: 0,
-            // y: -3,
-            // x: 10,
             duration: 2,
           },
           timelinePoint: 20.5,
@@ -450,14 +459,6 @@ export function MainPen(props) {
           },
           timelinePoint: 24,
         },
-        // {
-        //   objectToAnimate: customizerButtonRef.current,
-        //   properties: {
-        //     display: "block",
-        //     duration: 0.5,
-        //   },
-        //   timelinePoint: 24,
-        // },
         {
           objectToAnimate: customizerButtonRef.current,
           properties: {

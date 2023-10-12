@@ -21,7 +21,7 @@
 const Header = () => {
   return (
     <div
-      className="header w-[50%]"
+      className="header w-[100%]"
       style={{
         position: "absolute",
         top: `40vh`,
@@ -31,7 +31,7 @@ const Header = () => {
       }}
     >
       <span>Introducing the new</span>
-      <div className="py-8">
+      <div className="py-8 w-full">
         <h1
           className="title font-baskerville font-extrabold text-4xl sm:text-6xl md:text-8xl "
           style={{}}
@@ -43,7 +43,7 @@ const Header = () => {
         </h2>
       </div>
 
-      <h3 className="font-lato text-sm sm:text-base md:text-lg font-medium">
+      <h3 className="font-lato text-sm sm:text-base md:text-lg font-medium w-[60%] lg:w-[50%]">
         Welcome to our world of timeless elegance and sophistication, where the art of writing meets
         the epitome of style. Our classic pen is a masterpiece that embodies the essence of
         craftsmanship, designed to elevate your writing experience to a new level of excellence.

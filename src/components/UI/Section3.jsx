@@ -4,8 +4,10 @@ const Section3 = () => {
       className="section_three bg-opacity-5 opacity-0 h-[100vh] w-[100vw] flex items-center"
       style={{ position: "absolute", top: `300vh`, pointerEvents: "all", touchAction: "auto" }}
     >
-      <div className="absolute w-[50%] flex flex-col right-5 px-10">
-        <h2 className="capitalize font-extrabold text-6xl py-4">Clip - A Touch of Practicality</h2>
+      <div className="absolute w-[50%] flex flex-col right-5 md:px-5 lg:px-10">
+        <h2 className="capitalize font-extrabold text-2xl sm:text-4xl md:text-6xl py-4">
+          Clip - A Touch of Practicality
+        </h2>
         <p className="text-gray-300">
           Our pen's <span className="text-[#F4C580] capitalize font-bold">clip</span> is not just a
           practical feature; it's a statement of functionality and aesthetics. It securely attaches

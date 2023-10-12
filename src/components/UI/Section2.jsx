@@ -9,8 +9,10 @@ const Section2 = () => {
         touchAction: "auto",
       }}
     >
-      <div className="absolute top-[55%] w-[100%] max-w-[600px]">
-        <h2 className="capitalize font-extrabold text-6xl py-4">A Barrel of Elegance</h2>
+      <div className="absolute top-[55%] w-[100%] max-w-[600px] px-5 md:px-0">
+        <h2 className="capitalize font-extrabold text-2xl sm:text-4xl md:text-6xl text-center md:text-start py-4">
+          A Barrel of Elegance
+        </h2>
         <p className="text-gray-300">
           The <span className="text-[#F4C580] capitalize font-bold">barrel</span> of our classic pen
           is a work of art in itself. Crafted from the finest materials, it exudes elegance and
