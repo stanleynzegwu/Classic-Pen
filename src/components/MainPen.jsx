@@ -10,10 +10,7 @@ export function MainPen(props) {
   const snap = useSnapshot(store);
   const { nodes, materials } = useGLTF("/models/penNew.glb");
   const viewport = useThree((state) => state.viewport);
-  console.log(viewport.width);
   store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
-
-  // console.log(viewport);
 
   //modifying the materials to give dynamic color based on color in state
   materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor.color, isColor: true };
@@ -446,10 +443,10 @@ export function MainPen(props) {
         {
           objectToAnimate: main_ref.current,
           properties: {
-            background: "radial-gradient(circle at center, #ffff, #c0c0c0)",
+            background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
             duration: 0.2,
           },
-          timelinePoint: 23.9,
+          timelinePoint: 24.1,
         },
         {
           objectToAnimate: customizerButtonRef.current,

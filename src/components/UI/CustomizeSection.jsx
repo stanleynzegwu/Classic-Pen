@@ -4,6 +4,7 @@ import { useSnapshot } from "valtio";
 import { customizationExit_Animation, customizationIntro_Animation } from "../../utils";
 import Configurator from "./Configurator";
 import { useThree } from "@react-three/fiber";
+import closeIcon from "/images/closeIcon.png";
 
 const CustomizeSection = () => {
   const snap = useSnapshot(store);
@@ -21,7 +22,7 @@ const CustomizeSection = () => {
   return (
     <div
       ref={customizeSection_ref}
-      className={`h-[100vh] w-[100vw] flex items-center `}
+      className={`h-[100vh] w-[100vw] flex items-center`}
       style={{ position: "absolute", top: `600vh`, pointerEvents: "all", touchAction: "auto" }}
     >
       <button
@@ -49,7 +50,7 @@ const CustomizeSection = () => {
       </button>
       <Configurator />
       <button
-        className={`absolute bottom-6 h-[40px] w-[150px] font-bold right-10 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
+        className={`absolute bottom-6 h-[40px] w-[120px] font-bold right-12 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all invisible lg:visible ${
           snap.customizer_Enabled ? "visible" : "invisible"
         }`}
         onClick={() => {
@@ -64,6 +65,22 @@ const CustomizeSection = () => {
       >
         Exit
       </button>
+      <img
+        className={`absolute z-10 top-5 left-5 w-5 h-5 visible lg:invisible ${
+          snap.customizer_Enabled ? "visible" : "invisible"
+        }`}
+        src={closeIcon}
+        alt="clodeIcon"
+        onClick={() => {
+          store.controls_Enabled = false;
+          store.customizer_Enabled = false;
+          store.scroll_Enabled = true;
+          customizerExitScroll();
+          customizationExit_Animation(camera);
+          //change selectedPart back to null
+          store.modelConfigurator.selectedPart = null;
+        }}
+      />
     </div>
   );
 };

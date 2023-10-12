@@ -14,10 +14,10 @@ const Configurator = () => {
         snap.customizer_Enabled ? "visible" : "invisible"
       }`}
     >
-      <div className="absolute bottom-[20%] right-0 w-[100%] md:w-[20%] h-[20%] md:h-[80%] p-2 md:p-6 flex md:flex-col items-center">
+      {/* <div className="absolute bottom-[20%] right-0 w-[100%] md:w-[20%] h-[20%] md:h-[80%] p-2 md:p-6 flex md:flex-col items-center">
         <div className="w-[100%] h-full flex flex-col items-center gap-2 md:gap-6">
           <h2 className="capitalize text-md font-medium">model x</h2>
-          <div className="flex justify-center gap-4">
+          <div className="hidden md:flex justify-center gap-4">
             <div className="text-center">
               <span className="block text-[12px] font-semibold">150mm L</span>
               <span className="block text-[10px] text-gray-700">standard</span>
@@ -83,12 +83,12 @@ const Configurator = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       <div
-        className={`absolute bottom-0 w-[100%] h-[20%] flex flex-wrap items-center justify-between md:justify-center md:gap-20 px-2 md:px-6`}
+        className={`absolute bottom-8 md:bottom-0 w-[100%] h-[20%] flex flex-wrap items-center justify-between md:justify-center md:gap-20 px-2 md:px-6`}
       >
         {pen_Parts.map(({ partName, data, valueToChange, animation }, index) => (
-          <div className="flex flex-col gap-2" key={index}>
+          <div className="flex flex-col gap-1 md:gap-2" key={index}>
             <h3
               className={`capitalize text-sm font-medium px-2 max-w-max ${
                 snap.modelConfigurator.selectedPart === partName ? "rounded-full bg-[#f4dc52]" : ""
