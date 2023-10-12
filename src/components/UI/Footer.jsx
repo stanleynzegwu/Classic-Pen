@@ -149,14 +149,14 @@ const Footer = () => {
         />
       </div>
       <div className="h-[40%]">
-        <div className="absolute left-0 bottom-[12%] w-full flex flex-col justify-center items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">
+        <div className="h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-center items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">
           {/* <span>&and;</span> */}
           <img className="h-[20px] w-[20px]" src={upArrow} alt="upArrow" />
           <span className="text-sm font-semibold" onClick={handleScrollToTop}>
             Back to top
           </span>
         </div>
-        <div className="absolute bottom-0 left-0 w-[100%] flex items-center p-4">
+        <div className="h-1/2 bottom-0 left-0 w-[100%] flex items-end p-4">
           <ul className="font-semibold uppercase w-full flex justify-center gap-2 flex-wrap md:gap-10 text-center">
             <li className="">Luxury brand</li>
             <li>pens</li>
