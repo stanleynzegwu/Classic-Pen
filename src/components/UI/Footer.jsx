@@ -54,12 +54,12 @@ const Footer = () => {
         <img
           src={penImg1}
           alt="penBrand"
-          className="w-[100%] md:w-[50%] h-1/2 aspect-auto bg-gray-200"
+          className="w-[100%] md:w-[50%] h-1/2 md:h-full aspect-auto bg-gray-200"
         />
         <img
           src={penImg2}
           alt="penBrand1"
-          className="w-[100%] md:w-[50%] h-1/2 aspect-auto bg-gray-200"
+          className="w-[100%] md:w-[50%] h-1/2 md:h-full aspect-auto bg-gray-200"
         />
       </div>
       <div className="absolute bottom-[12%] w-full flex flex-col justify-center items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">

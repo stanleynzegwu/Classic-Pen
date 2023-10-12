@@ -259,7 +259,7 @@ export function MainPen(props) {
           objectToAnimate: section_4_ref.current,
           properties: {
             opacity: 0,
-            duration: 1.5,
+            duration: 2.5,
           },
           timelinePoint: 18.5,
         },
@@ -314,7 +314,7 @@ export function MainPen(props) {
             opacity: 0,
             duration: 1.5,
           },
-          timelinePoint: 22.8,
+          timelinePoint: 23.3,
         },
         {
           objectToAnimate: pen.current.rotation,
@@ -446,8 +446,8 @@ export function MainPen(props) {
         {
           objectToAnimate: main_ref.current,
           properties: {
-            background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
-            duration: 0.15,
+            background: "radial-gradient(circle at center, #ffff, #c0c0c0)",
+            duration: 0.2,
           },
           timelinePoint: 23.9,
         },
@@ -462,10 +462,10 @@ export function MainPen(props) {
         {
           objectToAnimate: customizerButtonRef.current,
           properties: {
-            opacity: 0,
-            duration: 1,
+            opacity: 1,
+            duration: 0.5,
           },
-          timelinePoint: 25.5,
+          timelinePoint: 26,
         },
         // {
         //   objectToAnimate: customizerButtonRef.current,
