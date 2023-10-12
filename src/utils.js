@@ -39,7 +39,8 @@ export const customizationIntro_Animation = (camera) => {
   timeline
   .to(camera.position, {
     x: 33,
-    y: 24,
+    // y: 24,
+    y: 22,
     z: -28,
     duration: 1,
     ease: "power1.inOut"

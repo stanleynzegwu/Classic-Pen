@@ -27,7 +27,8 @@ export const pen_Parts = [
       timeline
       .to(camera.position, {
         x: 22.0,
-        y: 11.5,
+        // y: 11.5,
+        y: 9,
         z: -2.0,
         duration: 1,
         ease: "power1.inOut"
@@ -84,7 +85,8 @@ export const pen_Parts = [
       })
       .to(camera.position, {
         x: 11.0,
-        y: 16.0,
+        // y: 16.0,
+        y: 13.0,
         z: -23.5,
         duration: 1,
         ease: "power1.inOut"
@@ -142,7 +144,8 @@ export const pen_Parts = [
       })
       .to(camera.position, {
         x: 23.0,
-        y: 19.5,
+        // y: 19.5,
+        y: 16.5,
         z: -27.0,
         duration: 1,
         ease: "power1.inOut"
@@ -167,7 +170,8 @@ export const clip_Animation = (camera) => {
   })
   .to(camera.position, {
     x: 11.0,
-    y: 16.0,
+    // y: 16.0,
+    y:13.0,
     z: -23.5,
     duration: 1,
     ease: "power1.inOut"

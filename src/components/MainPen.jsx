@@ -11,6 +11,7 @@ export function MainPen(props) {
   const { nodes, materials } = useGLTF("/models/penNew.glb");
   const viewport = useThree((state) => state.viewport);
   store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
+  const isMobile = store.mediaScreen === "isMobile";
 
   //modifying the materials to give dynamic color based on color in state
   materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor.color, isColor: true };
@@ -169,8 +170,8 @@ export function MainPen(props) {
         {
           objectToAnimate: pen.current.position,
           properties: {
-            x: -9,
-            y: 10,
+            x: isMobile ? -5 : -9,
+            y: isMobile ? 5 : 7,
             z: -10,
             duration: 3,
           },
@@ -221,8 +222,8 @@ export function MainPen(props) {
         {
           objectToAnimate: pen.current.position,
           properties: {
-            x: 38,
-            y: 12,
+            x: isMobile ? 26 : 39,
+            y: isMobile ? 9 : 12,
             z: -10,
             duration: 4,
           },
@@ -273,8 +274,10 @@ export function MainPen(props) {
         {
           objectToAnimate: pen.current.position,
           properties: {
-            x: -4.0,
-            y: 8.5,
+            // x: -4.0,
+            x: isMobile ? -3.0 : -4.0,
+            // y: 8.5,
+            y: isMobile ? 5.5 : 8.5,
             z: -14.5,
             duration: 4,
           },
@@ -326,8 +329,9 @@ export function MainPen(props) {
         {
           objectToAnimate: pen.current.position,
           properties: {
-            x: 1.5,
-            y: 10.5,
+            // x: 1.5,
+            x: isMobile ? -2 : 1.5,
+            y: 8,
             z: 0,
             duration: 2,
           },
