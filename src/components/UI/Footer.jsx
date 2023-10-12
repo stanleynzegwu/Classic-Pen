@@ -148,9 +148,8 @@ const Footer = () => {
           className="w-[100%] md:w-[50%] h-1/2 md:h-full aspect-auto bg-gray-200"
         />
       </div>
-      <div className="h-[40%]">
-        <div className="h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-center items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">
-          {/* <span>&and;</span> */}
+      <div className="h-[40%] bg-blue-300">
+        <div className="bg-red-400 h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-end items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">
           <img className="h-[20px] w-[20px]" src={upArrow} alt="upArrow" />
           <span className="text-sm font-semibold" onClick={handleScrollToTop}>
             Back to top

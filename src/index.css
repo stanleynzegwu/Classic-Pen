@@ -19,10 +19,10 @@ body,
   height: 100%;
 }
 
-.main {
+/* .main {
   max-width: 1500px;
   margin: 0 auto;
-}
+} */
 .main div::-webkit-scrollbar {
   width: 0;
   display: none;
