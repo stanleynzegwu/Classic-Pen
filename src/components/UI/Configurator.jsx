@@ -14,7 +14,7 @@ const Configurator = () => {
         snap.customizer_Enabled ? "visible" : "invisible"
       }`}
     >
-      {/* <div className="absolute bottom-[20%] right-0 w-[100%] md:w-[20%] h-[20%] md:h-[80%] p-2 md:p-6 flex md:flex-col items-center">
+      <div className="invisible lg:visible absolute bottom-[20%] right-0 w-[100%] md:w-[20%] h-[20%] md:h-[80%] p-2 md:p-6 flex md:flex-col items-center">
         <div className="w-[100%] h-full flex flex-col items-center gap-2 md:gap-6">
           <h2 className="capitalize text-md font-medium">model x</h2>
           <div className="hidden md:flex justify-center gap-4">
@@ -83,7 +83,7 @@ const Configurator = () => {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
       <div
         className={`absolute bottom-8 md:bottom-0 w-[100%] h-[20%] flex flex-wrap items-center justify-between md:justify-center md:gap-20 px-2 md:px-6`}
       >
