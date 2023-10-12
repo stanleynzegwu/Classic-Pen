@@ -7,13 +7,20 @@ import gsap from "gsap";
 
 const Footer = () => {
   const snap = useSnapshot(store);
+  const lastSectionRef = useRef();
+
   const handleScrollToTop = () => {
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
     window.scrollTo({
       top: 0,
+      left: 0,
       behavior: "smooth",
     });
   };
-  const lastSectionRef = useRef();
+
   useEffect(() => {
     const timeline = gsap.timeline();
     if (snap.customizer_Enabled) {
@@ -57,11 +64,13 @@ const Footer = () => {
       </div>
       <div className="absolute bottom-[12%] w-full flex flex-col justify-center items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">
         <span>&and;</span>
-        <span onClick={handleScrollToTop}>Back to top</span>
+        <span className="font-semibold" onClick={handleScrollToTop}>
+          Back to top
+        </span>
       </div>
       <div className="absolute bottom-0 w-[100%] flex items-center p-4">
-        <ul className="uppercase w-full flex justify-center gap-2 md:gap-10 text-center">
-          <li>Luxury brand</li>
+        <ul className="uppercase w-full flex justify-center gap-2 flex-wrap md:gap-10 text-center">
+          <li className="">Luxury brand</li>
           <li>pens</li>
           <li>the collection</li>
           <li>Legal notice</li>
