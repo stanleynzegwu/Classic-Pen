@@ -491,11 +491,19 @@ export function MainPen(props) {
         //   },
         //   timelinePoint: 24,
         // },
+        // {
+        //   objectToAnimate: main_ref.current,
+        //   properties: {
+        //     background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 29,
+        // },
         {
-          objectToAnimate: main_ref.current,
+          objectToAnimate: section_5_ref.current,
           properties: {
-            background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
-            duration: 0.5,
+            opacity: 0,
+            duration: 1.5,
           },
           timelinePoint: 29,
         },
