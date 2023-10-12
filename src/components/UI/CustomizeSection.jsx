@@ -3,9 +3,11 @@ import { store } from "../../store";
 import { useSnapshot } from "valtio";
 import { customizationExit_Animation, customizationIntro_Animation } from "../../utils";
 import Configurator from "./Configurator";
+import { useThree } from "@react-three/fiber";
 
 const CustomizeSection = () => {
   const snap = useSnapshot(store);
+  const camera = useThree((state) => state.camera);
   const customizeSection_ref = useRef();
   const customizeButton_ref = useRef();
 
@@ -40,7 +42,7 @@ const CustomizeSection = () => {
           scrollToElement();
           store.scroll_Enabled = false;
           store.controls_Enabled = true;
-          customizationIntro_Animation(snap.penRef.current);
+          customizationIntro_Animation(camera);
         }}
       >
         Customize
@@ -55,7 +57,9 @@ const CustomizeSection = () => {
           store.customizer_Enabled = false;
           store.scroll_Enabled = true;
           customizerExitScroll();
-          customizationExit_Animation(snap.penRef.current);
+          customizationExit_Animation(camera);
+          //change selectedPart back to null
+          store.modelConfigurator.selectedPart = null;
         }}
       >
         Exit

@@ -9,7 +9,13 @@ import { store } from "../store";
 export function MainPen(props) {
   const snap = useSnapshot(store);
   const { nodes, materials } = useGLTF("/models/penNew.glb");
-  // console.log(materials.goldpen_Gold.color);
+  const viewport = useThree((state) => state.viewport);
+  console.log(viewport.width);
+  store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
+
+  // console.log(viewport);
+
+  //modifying the materials to give dynamic color based on color in state
   materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor.color, isColor: true };
   materials.goldpen_Silver.color = { ...snap.modelConfigurator.otherColor.color, isColor: true };
   materials.silverBallMouth.color = {
@@ -19,7 +25,6 @@ export function MainPen(props) {
   const scroll = useScroll();
   const { camera } = useThree();
   const tl = useRef();
-
   // meshes ref
   const pen = useRef();
   const clipRef = useRef();
@@ -509,15 +514,9 @@ export function MainPen(props) {
     }
   }, [snap.start_Experience]);
 
-  useFrame(() => {
-    if (snap.start_Experience) {
-      tl.current.seek(scroll.offset * tl.current.duration());
-      // console.log(pen.current);
-    }
-  });
   // const { position, rotation, penPosition, penRotation } = useControls({
   //   position: {
-  //     value: { x: 33, y: 27, z: -28 },
+  //     value: { x: 33, y: 24, z: -28 },
   //     step: 0.5,
   //   },
   //   penPosition: {
@@ -531,10 +530,22 @@ export function MainPen(props) {
   //   rotation: {
   //     min: -Math.PI * 2,
   //     max: Math.PI * 2,
-  //     value: { x: camera.rotation.x, y: camera.rotation.y, z: camera.rotation.z },
+  //     value: { x: -2.44, y: 0.79, z: 2.2 },
   //     step: 0.04,
   //   },
   // });
+
+  useFrame(() => {
+    if (snap.start_Experience) {
+      tl.current.seek(scroll.offset * tl.current.duration());
+    }
+    // camera.position.x = position.x;
+    // camera.position.y = position.y;
+    // camera.position.z = position.z;
+    // camera.rotation.x = rotation.x;
+    // camera.rotation.y = rotation.y;
+    // camera.rotation.z = rotation.z;
+  });
 
   return (
     <group
@@ -542,6 +553,7 @@ export function MainPen(props) {
       dispose={null}
       ref={pen}
       castShadow
+      scale={snap.mediaScreen === "isMobile" ? 0.6 : 1}
       // position={[penPosition.x, penPosition.y, penPosition.z]}
       // rotation={[penRotation.x, penRotation.y, penRotation.z]}
     >

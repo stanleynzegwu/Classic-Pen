@@ -17,13 +17,13 @@ import { useThree } from "@react-three/fiber";
 
 const Experience = () => {
   const snap = useSnapshot(store);
-  // const environmentMap = useTexture("images/envMap.jpg");
-  // const scene = useThree((state) => state.scene);
+  const environmentMap = useTexture("images/envMap.jpg");
+  const scene = useThree((state) => state.scene);
 
-  // //EnvironmentMap
-  // environmentMap.mapping = THREE.EquirectangularReflectionMapping;
-  // environmentMap.colorSpace = THREE.SRGBColorSpace;
-  // scene.environment = environmentMap;
+  //EnvironmentMap
+  environmentMap.mapping = THREE.EquirectangularReflectionMapping;
+  environmentMap.colorSpace = THREE.SRGBColorSpace;
+  scene.environment = environmentMap;
   return (
     <>
       <OrbitControls
@@ -35,14 +35,9 @@ const Experience = () => {
       />
       <ambientLight intensity={1.5} />
       <directionalLight position={[1, 2, 3]} intensity={1} castShadow />
-      <Environment
+      {/* <Environment
         preset="city"
-        ground={{
-          height: 7,
-          radius: 28,
-          scale: 100,
-        }}
-      />
+      /> */}
       <ContactShadows
         resolution={512}
         position={[0, -0.8, 0]}

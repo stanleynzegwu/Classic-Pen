@@ -1,12 +1,14 @@
 import { proxy } from 'valtio'
 
 export const store = proxy({
+    mediaScreen: null,
     start_Experience: false,
     controls_Enabled: false,
     scroll_Enabled: true,
     customizer_Enabled: false, //will be true if you are in configurator
     penRef: null,
     modelConfigurator: {
+        selectedPart: null, //default null but will turn to the part selected in configurator
         clipType: 'branded',
         barrelColor: {
             name: 'gold',
