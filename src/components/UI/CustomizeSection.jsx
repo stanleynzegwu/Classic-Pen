@@ -12,6 +12,7 @@ const CustomizeSection = () => {
   const customizeSection_ref = useRef();
   const customizeButton_ref = useRef();
 
+  const isMobile = snap.mediaScreen === "isMobile";
   const scrollToElement = () => {
     customizeButton_ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -43,7 +44,7 @@ const CustomizeSection = () => {
           scrollToElement();
           store.scroll_Enabled = false;
           store.controls_Enabled = true;
-          customizationIntro_Animation(camera);
+          customizationIntro_Animation(camera, isMobile);
         }}
       >
         Customize

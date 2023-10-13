@@ -9,9 +9,7 @@ import { store } from "../store";
 export function MainPen(props) {
   const snap = useSnapshot(store);
   const { nodes, materials } = useGLTF("/models/penNew.glb");
-  const viewport = useThree((state) => state.viewport);
-  store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
-  const isMobile = store.mediaScreen === "isMobile";
+  const isMobile = snap.mediaScreen === "isMobile";
 
   //modifying the materials to give dynamic color based on color in state
   materials.goldpen_Gold.color = { ...snap.modelConfigurator.barrelColor.color, isColor: true };
@@ -563,7 +561,7 @@ export function MainPen(props) {
       dispose={null}
       ref={pen}
       castShadow
-      scale={snap.mediaScreen === "isMobile" ? 0.6 : 1}
+      scale={isMobile ? 0.6 : 1}
       // position={[penPosition.x, penPosition.y, penPosition.z]}
       // rotation={[penRotation.x, penRotation.y, penRotation.z]}
     >

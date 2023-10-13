@@ -9,14 +9,19 @@ import {
 } from "@react-three/drei";
 import { useSnapshot } from "valtio";
 import { MainPen } from "./components/MainPen";
-import { PenAndBox } from "./components/PenAndBox";
 import { store } from "./store";
 import AllSections from "./components/UI/AllSections";
 import * as THREE from "three";
 import { useThree } from "@react-three/fiber";
+import { useEffect } from "react";
 
 const Experience = () => {
   const snap = useSnapshot(store);
+  const viewport = useThree((state) => state.viewport);
+  useEffect(() => {
+    store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
+  }, []);
+
   // const environmentMap = useTexture("images/envMap.jpg");
   // const scene = useThree((state) => state.scene);
 
@@ -48,9 +53,6 @@ const Experience = () => {
         <ScrollControls pages={7.5} damping={0.1} enabled={snap.scroll_Enabled}>
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
-          {/* <Scroll>
-            <PenAndBox />
-          </Scroll> */}
           <AllSections />
         </ScrollControls>
       </Center>

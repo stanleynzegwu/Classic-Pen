@@ -22,13 +22,14 @@ export const pen_Parts = [
       },
     ],
     valueToChange: 'ballPointColor',
-    animation: (camera) => {
+    animation: (camera,isMobile) => {
       const timeline = gsap.timeline();
       timeline
       .to(camera.position, {
-        x: 22.0,
-        // y: 11.5,
-        y: 9,
+        // x: 22.0,
+        x: isMobile ? 17 : 22,
+        // y: 9,
+        y: isMobile ? 14 : 9,
         z: -2.0,
         duration: 1,
         ease: "power1.inOut"
@@ -72,7 +73,7 @@ export const pen_Parts = [
       },
     ],
     valueToChange: 'otherColor',
-    animation: (camera) => {
+    animation: (camera,isMobile) => {
       const timeline = gsap.timeline();
       timeline
     
@@ -84,10 +85,9 @@ export const pen_Parts = [
         ease: "power1.inOut"
       })
       .to(camera.position, {
-        x: 11.0,
-        // y: 16.0,
-        y: 13.0,
-        z: -23.5,
+        x: isMobile ? 17 : 11,
+        y: isMobile ? 17 : 13,
+        z: isMobile ? -17.5 : -23.5,
         duration: 1,
         ease: "power1.inOut"
       })
@@ -131,7 +131,7 @@ export const pen_Parts = [
       },
     ],
     valueToChange: 'barrelColor',
-    animation: (camera) => {
+    animation: (camera,isMobile) => {
       const timeline = gsap.timeline();
       timeline
     
@@ -143,10 +143,9 @@ export const pen_Parts = [
         ease: "power1.inOut"
       })
       .to(camera.position, {
-        x: 23.0,
-        // y: 19.5,
-        y: 16.5,
-        z: -27.0,
+        x: isMobile ? 20 : 23.0,
+        y: isMobile ? 18 : 16.5,
+        z: isMobile ? -16 : -27,
         duration: 1,
         ease: "power1.inOut"
       })
@@ -157,7 +156,7 @@ export const pen_Parts = [
 
 
 //specific animations
-export const clip_Animation = (camera) => {
+export const clip_Animation = (camera,isMobile) => {
   const timeline = gsap.timeline();
   timeline
 
@@ -169,10 +168,9 @@ export const clip_Animation = (camera) => {
     ease: "power1.inOut"
   })
   .to(camera.position, {
-    x: 11.0,
-    // y: 16.0,
-    y:13.0,
-    z: -23.5,
+    x: isMobile ? 17 : 11,
+    y: isMobile ? 17 : 13,
+    z: isMobile ? -17.5 : -23.5,
     duration: 1,
     ease: "power1.inOut"
   })

@@ -34,13 +34,12 @@ export function convertToCSSColor(rgb) {
 //     });
 // };
 
-export const customizationIntro_Animation = (camera) => {
+export const customizationIntro_Animation = (camera, isMobile) => {
   const timeline = gsap.timeline();
   timeline
   .to(camera.position, {
-    x: 33,
-    // y: 24,
-    y: 22,
+    x: isMobile ? 40 : 33,
+    y: isMobile ? 27 : 22,
     z: -28,
     duration: 1,
     ease: "power1.inOut"

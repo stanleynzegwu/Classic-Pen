@@ -8,6 +8,7 @@ const Configurator = () => {
   const snap = useSnapshot(store);
   const camera = useThree((state) => state.camera);
   const { clipType } = snap.modelConfigurator;
+  const isMobile = snap.mediaScreen === "isMobile";
   return (
     <div
       className={`relative w-[100%] h-[100%] text-black ${
@@ -38,7 +39,7 @@ const Configurator = () => {
                 //change the selectedPart to the clicked part if not already the case
                 snap.modelConfigurator.selectedPart !== "Clip/Tip" &&
                   (store.modelConfigurator.selectedPart = "Clip/Tip");
-                clip_Animation(camera);
+                clip_Animation(camera, isMobile);
                 store.modelConfigurator.clipType = "branded";
               }}
             >
@@ -54,7 +55,7 @@ const Configurator = () => {
                 //change the selectedPart to the clicked part if not already the case
                 snap.modelConfigurator.selectedPart !== "Clip/Tip" &&
                   (store.modelConfigurator.selectedPart = "Clip/Tip");
-                clip_Animation(camera);
+                clip_Animation(camera, isMobile);
                 store.modelConfigurator.clipType = "unBranded";
               }}
             >
@@ -114,7 +115,7 @@ const Configurator = () => {
                       //change the selectedPart to the clicked part if not already the case
                       snap.modelConfigurator.selectedPart !== partName &&
                         (store.modelConfigurator.selectedPart = partName);
-                      animation(camera);
+                      animation(camera, isMobile);
                       store.modelConfigurator[valueToChange] = { name, color };
                     }}
                   />
