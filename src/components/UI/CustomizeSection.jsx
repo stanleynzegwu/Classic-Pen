@@ -28,7 +28,7 @@ const CustomizeSection = () => {
     >
       <button
         ref={customizeButton_ref}
-        className={`customize_button opacity-0 h-[45px] w-[200px] font-bold absolute left-1/2 -translate-x-1/2  z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
+        className={`customize_button opacity-0 h-[40px] w-[160px] sm:h-[45px] sm:w-[200px] font-bold absolute left-1/2 -translate-x-1/2  z-10 bg-black bg-opacity-90 hover:bg-opacity-80 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
           snap.customizer_Enabled ? "invisible" : "visible"
         }`}
         style={{
@@ -67,7 +67,7 @@ const CustomizeSection = () => {
         Exit
       </button>
       <img
-        className={`absolute z-10 top-5 left-5 w-12 h-12 bg-white rounded-full p-2 cursor-pointer ${
+        className={`absolute z-10 top-5 left-5 w-9 h-9 sm:w-12 sm:h-12 bg-white rounded-full shadow-md shadow-[#6e6868] p-2 cursor-pointer ${
           snap.customizer_Enabled ? "visible lg:invisible" : "invisible"
         }`}
         src={closeIcon}
