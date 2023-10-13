@@ -96,10 +96,6 @@ const Footer = () => {
   const lastSectionRef = useRef();
 
   const handleScrollToTop = () => {
-    // window.scrollTo({
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
     window.scrollTo({
       top: 0,
       left: 0,
@@ -133,7 +129,7 @@ const Footer = () => {
   return (
     <div
       ref={lastSectionRef}
-      className="bg-gray-300 h-[100vh] w-[100vw] max-w-full  min-h-screen  z-50 flex flex-col p-5 text-black"
+      className="bg-gray-300 h-[100vh] w-[100vw] max-w-full  min-h-screen z-50 flex flex-col p-5 text-black"
       style={{ position: "fixed", top: `650vh`, right: "0" }}
     >
       <div className="w-[100%] flex flex-col md:flex-row gap-4 h-[60%]">

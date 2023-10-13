@@ -50,7 +50,7 @@ const Experience = () => {
         far={0.8}
       />
       <Center>
-        <ScrollControls pages={7.5} damping={0.1} enabled={snap.scroll_Enabled}>
+        <ScrollControls pages={8} damping={0.1} enabled={snap.scroll_Enabled}>
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
           <AllSections />
