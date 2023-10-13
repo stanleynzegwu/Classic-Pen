@@ -22,13 +22,13 @@ const Experience = () => {
     store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
   }, []);
 
-  // const environmentMap = useTexture("images/envMap.jpg");
-  // const scene = useThree((state) => state.scene);
+  const environmentMap = useTexture("images/envMap.jpg");
+  const scene = useThree((state) => state.scene);
 
-  // //EnvironmentMap
-  // environmentMap.mapping = THREE.EquirectangularReflectionMapping;
-  // environmentMap.colorSpace = THREE.SRGBColorSpace;
-  // scene.environment = environmentMap;
+  //EnvironmentMap
+  environmentMap.mapping = THREE.EquirectangularReflectionMapping;
+  environmentMap.colorSpace = THREE.SRGBColorSpace;
+  scene.environment = environmentMap;
   return (
     <>
       <OrbitControls
@@ -39,8 +39,8 @@ const Experience = () => {
         enabled={false}
       />
       <ambientLight intensity={1.5} />
-      <directionalLight position={[1, 2, 3]} intensity={1} castShadow />
-      <Environment preset="city" />
+      {/* <directionalLight position={[1, 2, 3]} intensity={1} castShadow /> */}
+      {/* <Environment preset="city" /> */}
       <ContactShadows
         resolution={512}
         position={[0, -0.8, 0]}

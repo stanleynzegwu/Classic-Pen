@@ -51,8 +51,8 @@ const CustomizeSection = () => {
       </button>
       <Configurator />
       <button
-        className={`absolute bottom-6 h-[40px] w-[120px] font-bold right-12 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all invisible lg:visible ${
-          snap.customizer_Enabled ? "visible" : "invisible"
+        className={`absolute bottom-6 h-[40px] w-[120px] font-bold right-12 z-10 bg-black bg-opacity-90 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
+          snap.customizer_Enabled ? "invisible lg:visible" : "invisible"
         }`}
         onClick={() => {
           store.controls_Enabled = false;
@@ -67,11 +67,11 @@ const CustomizeSection = () => {
         Exit
       </button>
       <img
-        className={`absolute z-10 top-5 left-5 w-5 h-5 visible lg:invisible ${
-          snap.customizer_Enabled ? "visible" : "invisible"
+        className={`absolute z-10 top-5 left-5 w-12 h-12 bg-white rounded-full p-2 cursor-pointer ${
+          snap.customizer_Enabled ? "visible lg:invisible" : "invisible"
         }`}
         src={closeIcon}
-        alt="clodeIcon"
+        alt="closeIcon"
         onClick={() => {
           store.controls_Enabled = false;
           store.customizer_Enabled = false;

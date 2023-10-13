@@ -29,6 +29,7 @@ body,
 }
 
 #root .main div{
+  z-index: 10;
   -ms-overflow-style: none;
   scrollbar-width: none;
   pointer-events: all;
@@ -36,10 +37,10 @@ body,
   -ms-touch-action: auto !important;
 }
 
-.main div {
+/* .main div {
   z-index: 10;
   touch-action: auto;
-}
+} */
 .main {
   background: radial-gradient(circle at center, #545454, #000);
   width: 100%;
@@ -61,9 +62,5 @@ body,
 
 .overlay_text {
   color: inherit;
-}
-.overlay_explore {
-  color: red;
-
 }
 

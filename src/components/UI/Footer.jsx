@@ -133,8 +133,8 @@ const Footer = () => {
   return (
     <div
       ref={lastSectionRef}
-      className="bg-gray-300 h-[100vh] min-h-screen w-[100vw] z-50 flex flex-col p-5 text-black"
-      style={{ position: "absolute", top: `650vh`, left: 0 }}
+      className="bg-gray-300 h-[100vh] w-[100vw] max-w-full  min-h-screen  z-50 flex flex-col p-5 text-black"
+      style={{ position: "absolute", top: `650vh`, right: "0" }}
     >
       <div className="w-[100%] flex flex-col md:flex-row gap-4 h-[60%]">
         <img
@@ -149,9 +149,9 @@ const Footer = () => {
         />
       </div>
       <div className="h-[40%]">
-        <div className="h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-end items-center py-5 border-y-[0.5px] border-[#ffffff] cursor-pointer">
+        <div className="h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-end items-center py-5 border-y-[0.5px] border-[#ffffff]">
           <img className="h-[20px] w-[20px]" src={upArrow} alt="upArrow" />
-          <span className="text-sm font-semibold" onClick={handleScrollToTop}>
+          <span className="text-sm font-semibold cursor-pointer" onClick={handleScrollToTop}>
             Back to top
           </span>
         </div>
