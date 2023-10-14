@@ -28,12 +28,12 @@ const CustomizeSection = () => {
     >
       <button
         ref={customizeButton_ref}
-        className={`customize_button opacity-0 h-[40px] w-[160px] sm:h-[45px] sm:w-[200px] font-bold absolute left-1/2 -translate-x-1/2  z-10 bg-black bg-opacity-90 hover:bg-opacity-80 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
+        className={`customize_button opacity-0 h-[40px] w-[160px] sm:h-[45px] sm:w-[200px] font-bold left-1/2 -translate-x-1/2 z-10 bg-black bg-opacity-90 hover:bg-opacity-80 rounded-full border border-solid border-[#FFD700] shadow-md shadow-[#ecde8c] transition-all ${
           snap.customizer_Enabled ? "invisible" : "visible"
         }`}
         style={{
           position: "absolute",
-          top: "7%",
+          top: "50%", //it was 7%
           left: "50%",
           transform: `translate(-50%,-50%)`,
           pointerEvents: "all",

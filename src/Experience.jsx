@@ -50,6 +50,7 @@ const Experience = () => {
         far={0.8}
       />
       <Center>
+        {/* it was 7.5 pages */}
         <ScrollControls pages={8} damping={0.1} enabled={snap.scroll_Enabled}>
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
