@@ -446,7 +446,7 @@ export function MainPen(props) {
           objectToAnimate: main_ref.current,
           properties: {
             background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
-            duration: 0.2,
+            duration: 0.15,
           },
           timelinePoint: 24.1,
         },

@@ -15,7 +15,7 @@ const AllSections = () => {
   const snap = useSnapshot(store);
   return (
     <Scroll html style={{ width: "100%", touchAction: "auto" }}>
-      <Navbar />
+      {/* <Navbar /> */}
       <Header />
       <Section1 />
       <Section2 />

@@ -4,11 +4,11 @@ import cart from "/images/shopping-cart.png";
 const Navbar = () => {
   return (
     <nav
-      className=" w-[100%] h-20"
+      className="w-[100%] h-20"
       style={{
         position: "absolute",
-        // top: `5vh`,
-        // left: "5%",
+        top: `0`,
+        // left: "0",
         pointerEvents: "all",
         touchAction: "auto",
       }}
@@ -18,7 +18,7 @@ const Navbar = () => {
           <img className=" " src={logo} alt="logo" />
         </li>
         <li className="w-[150px] h-full flex justify-center items-center">
-          <img className="w-[30px] h-[30px]" src={cart} alt="shooping-cart" />
+          <img className="w-[30px] h-[30px]" src={cart} alt="shopping-cart" />
         </li>
       </ul>
     </nav>

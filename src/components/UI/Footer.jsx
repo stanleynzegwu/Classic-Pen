@@ -84,8 +84,8 @@
 // export default Footer;
 
 import { useSnapshot } from "valtio";
-import penImg1 from "/images/pen_pix3.png";
-import penImg2 from "/images/pen_pix4.png";
+import penImg1 from "/images/penCase.png";
+import penImg2 from "/images/penCase2.png";
 import { store } from "../../store";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -130,9 +130,8 @@ const Footer = () => {
     <div
       ref={lastSectionRef}
       className="bg-gray-300 h-[100vh] w-[100vw] max-w-full  min-h-screen z-30 flex flex-col p-5 text-black"
-      style={{ position: "absolute", top: `700vh`, right: "0" }}
+      style={{ position: "absolute", top: `700vh`, left: "0" }}
     >
-      {/* //top was 650 */}
       <div className="w-[100%] flex flex-col md:flex-row gap-4 h-[60%]">
         <img
           src={penImg1}
@@ -146,13 +145,13 @@ const Footer = () => {
         />
       </div>
       <div className="h-[40%]">
-        <div className="h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-end items-center py-5 border-y-[0.5px] border-[#ffffff]">
+        {/* <div className="h-1/2 left-0 bottom-[12%] w-full flex flex-col justify-end items-center py-5 border-y-[0.5px] border-[#ffffff]">
           <img className="h-[20px] w-[20px]" src={upArrow} alt="upArrow" />
           <span className="text-sm font-semibold cursor-pointer" onClick={handleScrollToTop}>
             Back to top
           </span>
-        </div>
-        <div className="h-1/2 bottom-0 left-0 w-[100%] flex items-end p-4">
+        </div> */}
+        <div className="h-1/2 absolute bottom-0 left-0 w-[100%] flex items-end p-4">
           <ul className="font-semibold uppercase w-full flex justify-center gap-2 flex-wrap md:gap-10 text-center">
             <li className="">Luxury brand</li>
             <li>pens</li>

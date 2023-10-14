@@ -22,13 +22,13 @@ const Experience = () => {
     store.mediaScreen = viewport.width < 22 ? "isMobile" : "isDesktop";
   }, []);
 
-  // const environmentMap = useTexture("images/envMap.jpg");
-  // const scene = useThree((state) => state.scene);
+  const environmentMap = useTexture("images/envMap.jpg");
+  const scene = useThree((state) => state.scene);
 
-  // //EnvironmentMap
-  // environmentMap.mapping = THREE.EquirectangularReflectionMapping;
-  // environmentMap.colorSpace = THREE.SRGBColorSpace;
-  // scene.environment = environmentMap;
+  //EnvironmentMap
+  environmentMap.mapping = THREE.EquirectangularReflectionMapping;
+  environmentMap.colorSpace = THREE.SRGBColorSpace;
+  scene.environment = environmentMap;
   return (
     <>
       <OrbitControls
@@ -40,7 +40,7 @@ const Experience = () => {
       />
       <ambientLight intensity={1.5} />
       {/* <directionalLight position={[1, 2, 3]} intensity={1} castShadow /> */}
-      <Environment preset="city" />
+      {/* <Environment preset="city" /> */}
       <ContactShadows
         resolution={512}
         position={[0, -0.8, 0]}
@@ -51,7 +51,7 @@ const Experience = () => {
       />
       <Center>
         {/* it was 7.5 pages */}
-        <ScrollControls pages={8} damping={0.1} enabled={snap.scroll_Enabled}>
+        <ScrollControls pages={9} damping={0.1} enabled={snap.scroll_Enabled}>
           {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
           <MainPen />
           <AllSections />
