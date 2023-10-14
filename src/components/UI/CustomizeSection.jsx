@@ -23,7 +23,7 @@ const CustomizeSection = () => {
   return (
     <div
       ref={customizeSection_ref}
-      className={`h-[100vh] w-[200vw] flex items-center bg-red-500`}
+      className={`h-[100vh] w-[100vw] flex items-center`}
       style={{ position: "absolute", top: `600vh`, pointerEvents: "all", touchAction: "auto" }}
     >
       <button

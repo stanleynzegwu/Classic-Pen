@@ -130,7 +130,7 @@ const Footer = () => {
     <div
       ref={lastSectionRef}
       className="bg-gray-300 h-[100vh] w-[100vw] max-w-full  min-h-screen z-30 flex flex-col p-5 text-black"
-      style={{ position: "absolute", top: `700vh`, left: "0" }}
+      style={{ position: "absolute", top: `650vh`, left: "0" }}
     >
       <div className="w-[100%] flex flex-col md:flex-row gap-4 h-[60%]">
         <img
