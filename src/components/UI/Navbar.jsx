@@ -8,7 +8,6 @@ const Navbar = () => {
       style={{
         position: "absolute",
         top: `0`,
-        // left: "0",
         pointerEvents: "all",
         touchAction: "auto",
       }}

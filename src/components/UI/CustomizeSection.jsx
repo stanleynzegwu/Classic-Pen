@@ -78,8 +78,7 @@ const CustomizeSection = () => {
           store.scroll_Enabled = true;
           customizerExitScroll();
           customizationExit_Animation(camera);
-          //change selectedPart back to null
-          store.modelConfigurator.selectedPart = null;
+          store.modelConfigurator.selectedPart = null; //change selectedPart back to null
         }}
       />
     </div>

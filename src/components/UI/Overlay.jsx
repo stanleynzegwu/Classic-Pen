@@ -1,7 +1,6 @@
 import { useProgress } from "@react-three/drei";
 import { store } from "../../store";
 import { useSnapshot } from "valtio";
-import inkColored from "/images/inkColored-bg.png";
 import logo from "/images/silverLogo.png";
 import { useEffect } from "react";
 
@@ -10,7 +9,7 @@ export default function Overlay() {
   const progress = useProgress((state) => state.progress);
 
   useEffect(() => {
-    progress > 99 && (store.start_Experience = true);
+    progress >= 100 && (store.start_Experience = true);
   }, [progress]);
 
   return (

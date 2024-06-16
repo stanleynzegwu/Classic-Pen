@@ -1,24 +1,4 @@
-// const Header = () => {
-//   return (
-//     <h1
-//       className="title "
-//       style={{
-//         color: "#cdcbca",
-//         position: "absolute",
-//         top: `65vh`,
-//         left: "50%",
-//         fontSize: "13em",
-//         transform: `translate(-50%,-50%)`,
-//       }}
-//     >
-//       STAN
-//     </h1>
-//   );
-// };
-
 import Navbar from "./Navbar";
-
-// export default Header;
 
 const Header = () => {
   return (
