@@ -24,10 +24,10 @@ export default function Overlay() {
         </div>
         <div className="p-5 pt-0 flex flex-col justify-center items-center select-none">
           <h1 className="overlay_text text-lg font-bold">Classic Pen</h1>
-          <p>Loading... Please wait</p>
+          {/* <p>Loading... Please wait</p> */}
         </div>
-        <div className="w-[60%] h-[2px] bg-[#0f0e0e]">
-          <div className={`w-[${progress}%] h-[100%] bg-gray-600`} />
+        <div className="w-[60%] lg:w-[20%] h-[2px] bg-[#0f0e0e]">
+          <div className={`h-[100%] bg-gray-600`} style={{ width: `${Math.round(progress)}%` }} />
         </div>
       </div>
     </div>

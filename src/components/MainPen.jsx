@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { useGLTF, useScroll } from "@react-three/drei";
+import { Html, useGLTF, useScroll } from "@react-three/drei";
+import { useControls } from "leva";
 import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { useSnapshot } from "valtio";
@@ -89,6 +90,18 @@ export function MainPen(props) {
           },
           timelinePoint: 6,
         },
+        ///// i added this because i increased the scale for the landing page to make it better
+        // {
+        //   objectToAnimate: pen.current.scale,
+        //   properties: {
+        //     x: 1,
+        //     y: 1,
+        //     z: 1,
+        //     duration: 4,
+        //   },
+        //   timelinePoint: 0.2,
+        // },
+        //////
         {
           objectToAnimate: pen.current.rotation,
           properties: {
@@ -453,6 +466,38 @@ export function MainPen(props) {
           },
           timelinePoint: 26,
         },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     display: "hidden",
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 26,
+        // },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     opacity: 1,
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 24,
+        // },
+        // {
+        //   objectToAnimate: customizerButtonRef.current,
+        //   properties: {
+        //     top: "55%",
+        //     duration: 2,
+        //   },
+        //   timelinePoint: 24,
+        // },
+        // {
+        //   objectToAnimate: main_ref.current,
+        //   properties: {
+        //     background: "radial-gradient(circle at center, #ffff, #d9d9d9)",
+        //     duration: 0.5,
+        //   },
+        //   timelinePoint: 29,
+        // },
         {
           objectToAnimate: section_5_ref.current,
           properties: {
@@ -477,14 +522,49 @@ export function MainPen(props) {
     }
   }, [snap.start_Experience]);
 
+  // const { position, rotation, penPosition, penRotation } = useControls({
+  //   position: {
+  //     value: { x: 33, y: 24, z: -28 },
+  //     step: 0.5,
+  //   },
+  //   penPosition: {
+  //     value: { x: 1.5, y: 10.5, z: 0 },
+  //     step: 0.5,
+  //   },
+  //   penRotation: {
+  //     value: { x: -0.5, y: 0.3, z: 0 },
+  //     step: 0.5,
+  //   },
+  //   rotation: {
+  //     min: -Math.PI * 2,
+  //     max: Math.PI * 2,
+  //     value: { x: -2.44, y: 0.79, z: 2.2 },
+  //     step: 0.04,
+  //   },
+  // });
+
   useFrame(() => {
     if (snap.start_Experience) {
       tl.current.seek(scroll.offset * tl.current.duration());
     }
+    // camera.position.x = position.x;
+    // camera.position.y = position.y;
+    // camera.position.z = position.z;
+    // camera.rotation.x = rotation.x;
+    // camera.rotation.y = rotation.y;
+    // camera.rotation.z = rotation.z;
   });
 
   return (
-    <group {...props} dispose={null} ref={pen} castShadow scale={isMobile ? 0.6 : 1}>
+    <group
+      {...props}
+      dispose={null}
+      ref={pen}
+      castShadow
+      scale={isMobile ? 0.6 : 1}
+      // position={[penPosition.x, penPosition.y, penPosition.z]}
+      // rotation={[penRotation.x, penRotation.y, penRotation.z]}
+    >
       <mesh
         ref={barrelRef}
         name="Pen_Barrel"
