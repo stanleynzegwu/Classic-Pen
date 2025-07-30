@@ -39,7 +39,7 @@ const Experience = () => {
         enabled={false}
       />
       <ambientLight intensity={1.5} />
-      <Environment preset="city" />
+      <Environment files="/textures/city.hdr" environmentIntensity={0.8} />
       <ContactShadows
         resolution={512}
         position={[0, -0.8, 0]}
